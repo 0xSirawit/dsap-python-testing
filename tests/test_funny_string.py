@@ -1,7 +1,5 @@
 import unittest
-from src.funny_string import (
-    funnyString,
-)
+from src.funny_string import funnyString
 
 
 class TestFunnyString(unittest.TestCase):
