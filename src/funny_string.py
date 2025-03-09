@@ -1,4 +1,4 @@
-def funnyString(s):
+def funnyString(s: str) -> str:
     reverse = s[::-1]
     string_diff = []
     for i in range(len(s) - 1):

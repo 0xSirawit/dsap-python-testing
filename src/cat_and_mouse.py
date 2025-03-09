@@ -1,4 +1,4 @@
-def catAndMouse(x, y, z):
+def catAndMouse(x: int, y: int, z: int) -> str:
     distance_cat_a = abs(x - z)
     distance_cat_b = abs(y - z)
 
