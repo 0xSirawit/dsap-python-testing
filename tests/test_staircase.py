@@ -1,5 +1,5 @@
 import unittest
-from src import staircase
+from src.staircase import staircase
 
 
 class TestStaircase(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestStaircase(unittest.TestCase):
         expected_output = " #\n" + "##"
 
         # act
-        result = staircase.staircase(n, pattern)
+        result = staircase(n, pattern)
 
         # assert
         self.assertEqual(result, expected_output, f"Should be {expected_output}")
@@ -22,7 +22,7 @@ class TestStaircase(unittest.TestCase):
         expected_output = """#"""
 
         # act
-        result = staircase.staircase(n, pattern)
+        result = staircase(n, pattern)
 
         # assert
         self.assertEqual(result, expected_output, f"Should be {expected_output}")
@@ -36,7 +36,7 @@ class TestStaircase(unittest.TestCase):
 ###"""
 
         # act
-        result = staircase.staircase(n, pattern)
+        result = staircase(n, pattern)
 
         # assert
         self.assertEqual(result, expected_output, f"Should be {expected_output}")
@@ -57,7 +57,7 @@ class TestStaircase(unittest.TestCase):
 **********"""
 
         # act
-        result = staircase.staircase(n, pattern)
+        result = staircase(n, pattern)
 
         # assert
         self.assertEqual(result, expected_output, f"Should be {expected_output}")
@@ -99,7 +99,7 @@ class TestStaircase(unittest.TestCase):
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"""
 
         # act
-        result = staircase.staircase(n, pattern)
+        result = staircase(n, pattern)
 
         # assert
         self.assertEqual(
@@ -117,7 +117,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"""
 @@@@@"""
 
         # act
-        result = staircase.staircase(n, pattern)
+        result = staircase(n, pattern)
 
         # assert
         self.assertEqual(result, expected_output, f"Should be {expected_output}")
@@ -132,7 +132,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"""
 ^^^^"""
 
         # act
-        result = staircase.staircase(n, pattern)
+        result = staircase(n, pattern)
 
         # assert
         self.assertEqual(result, expected_output, f"Should be {expected_output}")
@@ -158,7 +158,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"""
 +++++++++++++++"""
 
         # act
-        result = staircase.staircase(n, pattern)
+        result = staircase(n, pattern)
 
         # assert
         self.assertEqual(result, expected_output, f"Should be {expected_output}")
