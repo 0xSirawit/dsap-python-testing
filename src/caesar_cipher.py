@@ -1,4 +1,4 @@
-def caesarCipher(s, k):
+def caesarCipher(s: str, k: int) -> str:
     k = k % 26
     cipher_text = []
     for char in s:
