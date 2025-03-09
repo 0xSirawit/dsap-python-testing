@@ -4,7 +4,6 @@ from src.guess_number import guess_int, guess_float
 
 
 class TestGuessNumbers(unittest.TestCase):
-
     # Basic test for guess_int
     @patch("src.guess_number.random.randint")
     def test_basic_guess_int(self, mock_randint):
@@ -44,3 +43,24 @@ class TestGuessNumbers(unittest.TestCase):
         result = guess_int(-5, 5)
         self.assertEqual(result, 0)
         mock_randint.assert_called_once_with(-5, 5)
+
+    # Stub test for guess_int
+    @patch("src.guess_number.random.randint")
+    def test_guess_int_stub(self, mock_randint):
+        mock_randint.return_value = 42
+        result = guess_int(0, 100)
+        self.assertEqual(result, 42)
+
+    # Stub test for guess_float
+    @patch("src.guess_number.random.uniform")
+    def test_guess_float_stub(self, mock_uniform):
+        mock_uniform.return_value = 6.28
+        result = guess_float(0.0, 10.0)
+        self.assertEqual(result, 6.28)
+
+    # Stub test for guess_int with large numbers
+    @patch("src.guess_number.random.randint")
+    def test_guess_int_large_numbers_stub(self, mock_randint):
+        mock_randint.return_value = 1000000
+        result = guess_int(1000, 2000000)
+        self.assertEqual(result, 1000000)
